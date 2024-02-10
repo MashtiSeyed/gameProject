@@ -6,9 +6,9 @@ const GameGrid = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      <SimpleGrid spacing={10} column={{sm: 1, md: 2, lg: 3, xl: 5}}>
+      <SimpleGrid spacing={10} padding={14} columns={{sm: 1, md: 2, lg: 3}}>
         {games.map((game) => (
-          <GameCard game={game} />
+          <GameCard game={game}/>
         ))}
       </SimpleGrid>
     </div>
