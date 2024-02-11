@@ -1,7 +1,6 @@
-const getUrlOfLoadedImages = (shit: string) => {
-  const target = "media/";
-  const urlLoad = shit.indexOf(target) + target.length;
-  return shit.slice(0, urlLoad) + 'crop/600/400/' + shit.slice(urlLoad)
+const getUrlOfLoadedImages = (url: string) => {
+  const urlLoad = url.indexOf("media/") + "media/".length;
+  return url.slice(0, urlLoad) + 'crop/600/400/' + url.slice(urlLoad);
 };
 
 export default getUrlOfLoadedImages;
