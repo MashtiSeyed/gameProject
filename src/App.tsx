@@ -6,6 +6,7 @@ const App = () => {
   return (
     <Grid
       templateAreas={{
+        base: 'nav menu',
         lg: `"nav nav" "aside main"`,
       }}
     >
@@ -13,7 +14,7 @@ const App = () => {
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem area={"aside"}>{<GenresList />}</GridItem>
+        <GridItem area={"aside"} paddingLeft={4}>{<GenresList />}</GridItem>
       </Show>
       <GridItem area={"main"}>
         <GameGrid />
