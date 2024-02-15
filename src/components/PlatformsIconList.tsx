@@ -23,7 +23,6 @@ const IconMap: { [key: string]: IconType } = {
   android: FaAndroid,
   linux: FaLinux,
   ios: FaAppStoreIos
-
 };
 
 const PlatformsIconList = ({ platforms }: Props) => {
