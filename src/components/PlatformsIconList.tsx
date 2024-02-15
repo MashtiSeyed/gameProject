@@ -20,7 +20,7 @@ const IconMap: { [key: string]: IconType } = {
   xbox: FaXbox,
   mac: FaApple,
   android: FaAndroid,
-  linus: FaLinux,
+  linux: FaLinux,
 };
 
 const PlatformsIconList = ({ platforms }: Props) => {
