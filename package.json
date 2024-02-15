@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
     "axios": "^1.6.7",
     "framer-motion": "^11.0.3",
     "git": "^0.1.5",

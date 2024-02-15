@@ -7,6 +7,7 @@ import {
   FaApple,
   FaAndroid,
   FaLinux,
+  FaAppStoreIos
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 
@@ -21,6 +22,8 @@ const IconMap: { [key: string]: IconType } = {
   mac: FaApple,
   android: FaAndroid,
   linux: FaLinux,
+  ios: FaAppStoreIos
+
 };
 
 const PlatformsIconList = ({ platforms }: Props) => {
