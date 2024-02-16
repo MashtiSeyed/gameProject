@@ -26,6 +26,7 @@ const GenresList = ({ onSelectGenre, selectedGenre }: Props) => {
         <ListItem key={genre.id}>
           <HStack paddingTop={2}>
             <Image
+            objectFit='cover'
               boxSize="42px"
               borderRadius="8px"
               src={getUrlOfLoadedImages(genre.image_background)}
@@ -35,6 +36,8 @@ const GenresList = ({ onSelectGenre, selectedGenre }: Props) => {
               onClick={() => onSelectGenre(genre)}
               variant="link"
               fontSize={19}
+              whiteSpace='normal'
+              textAlign='left'
             >
               {genre.name}
             </Button>
