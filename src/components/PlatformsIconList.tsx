@@ -7,7 +7,7 @@ import {
   FaApple,
   FaAndroid,
   FaLinux,
-  FaAppStoreIos
+  FaAppStoreIos,
 } from "react-icons/fa";
 import { IconType } from "react-icons";
 

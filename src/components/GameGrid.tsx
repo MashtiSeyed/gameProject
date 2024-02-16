@@ -12,7 +12,7 @@ gameQuery: GameQuery;
 const GameGrid = ({gameQuery}:Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [
-    123, 123, 132, 132, 12, 31, 321, 31, 23, 21, 3, 132, 1, 3, 12, 3,
+    123, 123, 132, 132, 12, 31, 321, 31, 23, 21, 3, 132, 1, 3, 12, 3
   ];
   return (
     <div>
