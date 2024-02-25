@@ -13,4 +13,4 @@ const GamesHeading = ({gameQuery}:Props) => {
   )
 }
 
-export default GamesHeading
+export default GamesHeading;

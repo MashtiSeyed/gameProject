@@ -8,6 +8,7 @@ import PlatformsComponent from "./components/PlatformsComponent";
 import { Platform } from "./hooks/useGame";
 import SortComponent from "./components/SortComponent";
 import GamesHeading from "./components/GamesHeading";
+
 export interface GameQuery {
   genre: Genres | null;
   platform: Platform | null;
@@ -21,7 +22,7 @@ const App = () => {
     <Grid
       templateAreas={{
         base: `'nav'
-                'main'`,
+               'main'`,
         lg: `"nav nav" "aside main"`,
       }}
     >
