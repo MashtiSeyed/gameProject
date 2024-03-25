@@ -9,8 +9,8 @@ interface Props {
 const Emoji = ({rating}:Props) => {
     if(rating < 3) return null;
     const rates:{[key: number]:ImageProps} = {
-        3:{src: Thumb, alt: 'recommended'},
-        4:{src: Meh, alt: 'not good'},
+        4:{src: Thumb, alt: 'recommended'},
+        3:{src: Meh, alt: 'not good'},
         5:{src: Bulleye, alt: 'exelent'},
     }
     return (
