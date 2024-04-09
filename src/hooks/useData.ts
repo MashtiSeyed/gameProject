@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 import { AxiosRequestConfig, CanceledError } from "axios";
 
-interface FetchData<T> {
+export interface FetchData<T> {
   count: number;
   results: T[];
 }
@@ -23,6 +23,7 @@ const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?:
       .then((res) => {
         setData(res.data.results);
         setIsLoading(false);
+        console.log(res.data.results)
       })
       .catch((err) => {
         if (err instanceof CanceledError) return;
