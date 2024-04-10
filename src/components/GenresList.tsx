@@ -11,10 +11,10 @@ import GenresSkeleton from "./GenresSkeleton";
 
 interface Props {
   onSelectGenre: (genre: Genres) => void;
-  selectedGenre: Genres | null;
+  selectedGenreId?: number;
 }
 
-const GenresList = ({ onSelectGenre, selectedGenre }: Props) => {
+const GenresList = ({ onSelectGenre, selectedGenreId }: Props) => {
   const { data, isLoading, error } = useGenres();
   const skeletens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
   if(error) return null
@@ -32,7 +32,7 @@ const GenresList = ({ onSelectGenre, selectedGenre }: Props) => {
               src={getUrlOfLoadedImages(genre.image_background)}
             ></Image>
             <Button
-              fontWeight={selectedGenre?.id === genre.id ? "bold" : "normal"}
+              fontWeight={selectedGenreId === genre.id ? "bold" : "normal"}
               onClick={() => onSelectGenre(genre)}
               variant="link"
               fontSize={19}
