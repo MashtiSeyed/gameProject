@@ -12,7 +12,6 @@ interface Props {
 
 const GameGrid = ({ gameQuery }: Props) => {
   const pageSize = 10;
-  const hasMoreData = true;
   const { data, error, isLoading, fetchNextPage } = useGames(gameQuery, {
     pageSize,
   });
@@ -22,7 +21,7 @@ const GameGrid = ({ gameQuery }: Props) => {
       {error && <p>{error.message}</p>}
       <InfiniteScroll
         dataLength={data?.pages.length || 0}
-        hasMore={!hasMoreData}
+        hasMore={true}
         next={() => fetchNextPage()}
         loader={<Spinner size="lg" />}
       >
