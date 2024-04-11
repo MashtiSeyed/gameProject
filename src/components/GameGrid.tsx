@@ -6,6 +6,8 @@ import GameCardContainer from "./GameCardContainer";
 import { GameQuery } from "../App";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+
+
 interface Props {
   gameQuery: GameQuery;
 }

@@ -12,7 +12,7 @@ interface Platform {
 
 const usePlatforms = () => {
   return useQuery<FetchData<Platform>>({
-    queryKey: ["games"],
+    queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     initialData: platformData
   })
