@@ -5,18 +5,18 @@ import {
   ListItem,
   Button,
 } from "@chakra-ui/react";
-import useGenres, { Genres } from "../hooks/useGenres";
+import useGenres from "../hooks/useGenres";
 import getUrlOfLoadedImages from "../services/image-crop";
 import GenresSkeleton from "./GenresSkeleton";
+import gameQueryStore from "../store/queryStore";
 
-interface Props {
-  onSelectGenre: (genre: Genres) => void;
-  selectedGenreId?: number;
-}
 
-const GenresList = ({ onSelectGenre, selectedGenreId }: Props) => {
+
+const GenresList = () => {
   const { data, isLoading, error } = useGenres();
   const skeletens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  const selectedGenreId = gameQueryStore(s => s.gameQuery.genreId);
+  const setSelectedGenreId = gameQueryStore(s => s.setGenreId);
   if(error) return null
   return (
     <List>
@@ -33,7 +33,7 @@ const GenresList = ({ onSelectGenre, selectedGenreId }: Props) => {
             ></Image>
             <Button
               fontWeight={selectedGenreId === genre.id ? "bold" : "normal"}
-              onClick={() => onSelectGenre(genre)}
+              onClick={() => setSelectedGenreId(genre.id)}
               variant="link"
               fontSize={19}
               whiteSpace='normal'
