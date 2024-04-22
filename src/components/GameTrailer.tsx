@@ -13,7 +13,7 @@ const GameTrailer = ({gameId}:Props) => {
 
   if(!data) return null;
   return (
-    <video style={{width: '75%'}} src={data.results[0].data[480]} poster={data.results[0].preview} controls/>  
+    <video  src={data.results[0].data[480]} poster={data.results[0].preview} controls/>  
   )
 }
 
