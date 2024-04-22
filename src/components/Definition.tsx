@@ -6,7 +6,7 @@ interface Props {
   children: ReactNode | ReactNode[];
 }
 
-const GameAttributes = ({ term, children }: Props) => {
+const Definition = ({ term, children }: Props) => {
   return (
     <>
       <Box>
@@ -17,4 +17,4 @@ const GameAttributes = ({ term, children }: Props) => {
   );
 };
 
-export default GameAttributes;
+export default Definition;
